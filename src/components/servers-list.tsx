@@ -43,7 +43,8 @@ export default function ServersList({ data }: Props) {
     const handleSearch = async (data: SearchFormProps) => {
         const filteredServers = await getServers(
             {
-                term: data.term
+                term: data.term,
+                take: 500
             },
             true
         );
