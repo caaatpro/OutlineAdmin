@@ -40,9 +40,9 @@ jobs:
           VERSION=${{ github.ref_name }}
           # Remove leading 'v' if it exists
           VERSION=${VERSION#v}
-          
-          docker build -t amro045/outline-admin:$VERSION .
-          docker push amro045/outline-admin:$VERSION
 
-          docker tag amro045/outline-admin:$VERSION amro045/outline-admin:latest
-          docker push amro045/outline-admin:latest
+          docker build -t nexus.caaat.pro/repository/docker-projects/caaat/outline-admin:$VERSION .
+          docker push nexus.caaat.pro/repository/docker-projects/caaat/outline-admin:$VERSION
+
+          docker tag nexus.caaat.pro/repository/docker-projects/caaat/outline-admin:latest
+          docker push nexus.caaat.pro/repository/docker-projects/caaat/outline-admin:latest
