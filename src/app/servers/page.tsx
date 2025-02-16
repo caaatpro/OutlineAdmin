@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 export default async function ServersPage() {
-    const servers: Server[] = await getServers({ take: 500 }, true);
+    const servers: Server[] = await getServers({}, true);
 
     return <ServersList data={servers} />;
 }
