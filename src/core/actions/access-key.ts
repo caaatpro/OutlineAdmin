@@ -12,7 +12,7 @@ export async function getAccessKeys(
     serverId: number,
     filters?: { skip?: number; take?: number }
 ): Promise<AccessKey[]> {
-    const { skip = 0, take = 10 } = filters || {};
+    const { skip = 0, take = 500 } = filters || {};
 
     return prisma.accessKey.findMany({
         where: {
