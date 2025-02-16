@@ -45,5 +45,5 @@ jobs:
           docker build -t nexus.caaat.pro/repository/caaat/outline-admin:$VERSION .
           docker push nexus.caaat.pro/repository/caaat/outline-admin:$VERSION
 
-          docker tag nexus.caaat.pro/repository/caaat/outline-admin:latest
+          docker tag nexus.caaat.pro/repository/caaat/outline-admin:$VERSION nexus.caaat.pro/repository/caaat/outline-admin:latest
           docker push nexus.caaat.pro/repository/caaat/outline-admin:latest
